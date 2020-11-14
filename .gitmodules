@@ -1,0 +1,9 @@
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:phugodness/frontend.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:phugodness/backend.git
+[submodule "proxy"]
+	path = proxy
+	url = git@github.com:phugodness/proxy.git
