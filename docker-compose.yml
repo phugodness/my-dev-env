@@ -56,6 +56,23 @@ services:
     networks:
       - dev-network
 
+  graph:
+    depends_on:
+      - mysql
+    container_name: graph
+    build:
+      context: ./graph
+      dockerfile: Dockerfile
+    environment:
+      - PORT=3000
+    volumes:
+      - "./graph:/app"
+    #   - '/app/node_modules'
+    ports:
+      - "4000:3000"
+    networks:
+      - dev-network
+
   backend:
     depends_on:
       - mysql

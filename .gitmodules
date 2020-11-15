@@ -7,3 +7,6 @@
 [submodule "proxy"]
 	path = proxy
 	url = git@github.com:phugodness/proxy.git
+[submodule "graph"]
+	path = graph
+	url = git@github.com:phugodness/graph.git
