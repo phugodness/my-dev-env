@@ -28,7 +28,7 @@ services:
     container_name: frontend
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: ./dockerfiles/app.Dockerfile
     environment:
       - PORT=8080
     volumes:
@@ -45,7 +45,7 @@ services:
     container_name: proxy
     build:
       context: ./proxy
-      dockerfile: Dockerfile
+      dockerfile: ./dockerfiles/server.Dockerfile
     environment:
       - PORT=3000
     volumes:
@@ -62,7 +62,7 @@ services:
     container_name: graph
     build:
       context: ./graph
-      dockerfile: Dockerfile
+      dockerfile: ./dockerfiles/server.Dockerfile
     environment:
       - PORT=3000
     volumes:
@@ -79,7 +79,7 @@ services:
     container_name: backend
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: ./dockerfiles/server.Dockerfile
     environment:
       - PORT=3000
     volumes:
